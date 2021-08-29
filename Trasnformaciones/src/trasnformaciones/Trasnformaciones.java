@@ -44,6 +44,7 @@ class Coord {
 class Cuadrado {
     private Coord c;
     private int lado;
+    private float ang;
     public Cuadrado(Coord c, int lado) {
         this.c = c;
         this.lado = lado;
@@ -55,9 +56,10 @@ class Cuadrado {
     public void Escalado(int sc) {  // Complete los parámetros requeridos
         lado = (int) (lado *(1+ sc/100.0f));
     }
-    public void Rotacion() {  // Complete los parámetros requeridos
-        Trasnformaciones rotacion = new Trasnformaciones();
-        rotacion.rotX(Math.toRadians(0));
+    public void Rotacion(int x, int y, float ang) {  // Complete los parámetros requeridos
+         
+       c.setX*Math.cos(ang)-y*Math.sin(ang);
+       c.setX*Math.sin(ang)+y*Math.cos(ang);
     }
 }
 
